@@ -1,0 +1,161 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Prepare seu portfólio. Grandes profissionais e referências no mercado estarão reunidos para avaliar seu trabalho." />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Marco Vincit">
+
+	<!-- Facebook OG Tags -->
+	<meta property="og:image" content="http://behancereviewsbh.com.br/assets/img/og.jpg"/>
+	<meta property="og:title" content="Bēhance Portfolio Reviews - Belo Horizonte #11"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://behancereviewsbh.com.br/"/>
+	<meta property="og:site_name" content="Bēhance Portfolio Reviews - Belo Horizonte #11"/>
+
+	<meta property="og:description" content="Prepare seu portfólio. Grandes profissionais e referências no mercado estarão reunidos para avaliar seu trabalho." />
+	<!-- ================ -->
+
+	<title>Bēhance Portfolio Reviews - Belo Horizonte #11</title>
+	<link rel="icon" href="favicon.png" type="image/x-icon" />
+	<link rel="stylesheet" href="assets/dist/all.min.css">
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<!-- Create HTML 5 elements and fix media queries on Internet Explorer -->
+	<!--[if IE]>
+	<script src="assets/hacks/respond.min.js"></script>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77192825-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<header class="home">
+	<div class="content-margin">
+		<div id="event-name">
+			<p>Bēhance Portfolio Reviews <br> Belo Horizonte #11</p>
+		</div>
+		<div id="event-location">
+			<p>Guaja <br> Av. Afonso Pena, 2881</p>
+		</div>
+		<div id="event-date">
+			<p> <span>13.05.2017</span> <br> 10 — 18:00</p>
+		</div>
+	</div>
+</header>
+
+<div id="float-ball"></div>
+
+
+
+
+
+
+
+
+
+
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="299.13" height="184.87" viewBox="0 0 299.13 184.87">
+  <path class="path01" d="M490.44,183.51v179.2H311.24V183.51h179.2m2.83-2.83H308.4V365.55H493.28V180.67Z" transform="translate(-308.4 -180.67)"/>
+  <path d="M490.44,187.52v175.2H315.25l175.2-175.2m2.83-6.84L308.4,365.55H493.28V180.67Z" transform="translate(-308.4 -180.67)"/>
+  <path d="M604.69,183.51v179.2H311.24V183.51H604.69m2.83-2.83H308.4V365.55H607.53V180.67Z" transform="translate(-308.4 -180.67)"/>
+</svg>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+
+<script type="text/javascript">
+	
+
+
+	var shapes = $("rect, circle, ellipse, polyline"),
+		tl = new TimelineMax({onUpdate:updateSlider, repeat:1, yoyo:true});
+
+tl.staggerFromTo(shapes, 1, {drawSVG:"100%"}, {drawSVG:"50% 50%"}, 0.1)
+  .fromTo(shapes, 0.1, {drawSVG:"0%"}, {drawSVG:"10%", immediateRender:false}, "+=0.1")
+  .staggerTo(shapes, 1, {drawSVG:"90% 100%"}, 0.5)
+  .to(shapes, 1, {rotation:360, scale:0.5, drawSVG:"100%", stroke:"white", strokeWidth:6, transformOrigin:"50% 50%"})
+  .staggerTo(shapes, 0.5, {stroke:"red", scale:1.5, opacity:0}, 0.2)
+
+  
+/* --- controls --- */
+
+
+function updateSlider() {
+	$slider.slider("value", tl.progress() * 100);
+}
+var $replayIcon = $("#replayIcon"),
+    $replay = $("#replay").mouseenter(function(){
+      TweenLite.to($replayIcon, 0.4, {rotation:"+=360"});
+      TweenLite.to($replay, 0.4, {opacity:1});
+    }).mouseleave(function(){
+      TweenLite.to($replay, 0.4, {opacity:0.65});
+    }).click(function(){
+      tl.restart();
+});
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<section id="home">
+	<div id="event-date-home">
+		<img src="assets/img/event-date.svg" alt="Bēhance Portfolio Reviews - Belo Horizonte #11">
+	</div>
+</section>
+
+<section id="phrases">
+	
+</section>
+
+<section id="organizers">
+	
+</section>
+
+<section id="location">
+	
+</section>
+
+
+<script src="assets/dist/concat.min.js"></script>
+
+</body>
+</html>
