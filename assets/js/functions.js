@@ -1,198 +1,119 @@
 $(document).ready(function() {
 
-	$(window).load(function () {
+	function close() {
+		var closeOffset = $('circle.ball').offset();
+		var closeSize = $('circle.ball').size();
+		console.log(closeSize)
+		$('.close').offset(closeOffset);
+	}
+
+
+
+
+	$('#main-menu li').hover(function() {
+
+		$('#main-menu li').addClass('off');
+		$(this).removeClass('off');
+
+
+		var idMenu = $(this).attr('data-link');
+
+
+		$('#home').removeAttr('class').addClass(idMenu);
+
+
+		$("circle.ball").attr('class','ball');
+
+		$("#"+idMenu+"_shape").find("circle.ball").attr('class','ball active');
+
 
 		setTimeout(function(){
+
+			$(".father").removeClass('hover');
+			$("#"+idMenu+"_shape").addClass('hover');
+
+		}, 500);
+				
+
+
 		
 
-		}, 3000);
+	}, function() {
 
+		$('#main-menu li').removeClass('off');
 
-	});
-
-
-
-	///
-
-    $.rand = function(arg) {
-	        if ($.isArray(arg)) {
-	            return arg[$.rand(arg.length)];
-	        } else if (typeof arg == "number") {
-	            return Math.floor(Math.random() * arg);
-	        } else {
-	            return 4;  // chosen by fair dice roll
-	        }
-	    };
-
-	var items = ['blue','blue-light-01','blue-light-02','blue-dark-01','blue-dark-02','pink-01','pink-02','green-01','green-02','purple-01','purple-02','yellow-01','yellow-02'];
-
-
-
-
-
-	$('#float-ball').attr('class', $.rand(items));
-
-
-
-
-	var stade = $('#home'),
-		stadeWidth = stade.width();
-		stadeHeight = stade.height();
-
-
- 	function randomize() {
- 		$('#float-ball').each(function () {
-	 		var random = $(this),
-		 		randomWidth = random.width(),
-		 		randomHeight = random.height(),
-
-		 		randomTop = Math.floor(Math.random() * (stadeHeight-randomHeight + 1) + 0),
-		 		randomLeft = Math.floor(Math.random() * (stadeWidth-randomWidth + 1) + 0);
-
-	 		random.css({transform: 'translate(' + randomTop + 'px, ' + randomLeft + 'px)'});
-	 	});
- 	}
-
-
- 	randomize();
-
-
-	$('#float-ball').click(function() {
-		$(this).removeAttr('class');
-		$(this).attr('class', $.rand(items));
-		randomize();
-
-	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	$('*[data-link="true"]').click(function () {
-
-		$('*[data-link="true"]').removeClass('current');
-
-		$(this).addClass('current');
-
-		var linkHash = $(this).attr('href'),
-			link = linkHash.replace('#', ''),
-			sectionCurrent = $(".section.in");
-
-		console.log(link)
-
-		$('#header, #sebrae, #hotmart, #logo span, #graphism, #bg-mask, #menu, #back').removeAttr('class').attr('class', link);
-
-		sectionCurrent.addClass("out").removeClass("in");
-
-		$('#'+link).addClass("in").removeClass("out");
 
 		setTimeout(function(){
-			sectionCurrent.removeClass("out");
-		}, 3000);
+			$(".father").removeClass('hover');
+		}, 500);
+
+		
+
+		// , #event-name, #event-location, #event-date, #event-sponsorships
+	});
 
 
-		window.history.pushState(link, link, link);
-
-		return false;
+	$('#main-menu li').click(function () {
 
 
+		$('#main-menu, #header').addClass('out');
 
+		var idMenu = $(this).attr('data-link');
+
+		$('.father').addClass('off');
+
+		$("#"+idMenu+"_shape").removeClass('off').addClass('change');
+
+
+		setTimeout(function(){
+
+			$("#"+idMenu+"_shape").removeClass('change').addClass('active');
+
+
+		}, 10);
+
+		setTimeout(function(){
+
+			$("#"+idMenu).addClass('active');
+
+		}, 500);
+
+		// $('#home').removeAttr('class').addClass(idMenu+"-active");
+
+		// $("#"+idMenu).addClass('active');
+
+
+		close();
+
+		setTimeout(function(){ close(); }, 1000);
 
 	});
 
 
 
+	$(".close").click(function () {
 
-	$('.names-list a').each(function () {
+		$(".father.active").addClass('change-return').removeClass('active');
+		$(".section.active").removeClass('active');
 
+		$("#header").removeClass('active');
 
-		$(this).hover(function () {
-			$('.names-list a, .names-list span, .names-list p span').addClass('inactive');
-
-			$(this).removeClass('inactive');
-
-
-			var thisClass = $(this).attr('data-name'),
-				thisClassIcon = thisClass.replace('#', '');
-
-			$('#organizador-photo, #avaliador-photo').removeAttr('class').addClass(thisClassIcon);
+		
 
 
-		}, function () {
-			$('.names-list a, .names-list span, .names-list p span').removeClass('inactive');
-			$('#organizador-photo, #avaliador-photo').removeAttr('class');
-		});
+		setTimeout(function(){
 
+			$(".change-return").removeClass('change-return');
+
+			$('#main-menu, #header').removeClass('out');
+			$('.father').removeClass('off');
+
+		}, 1000);
+
+		
+
+		close();
 	});
-
-
 
 
 });
-
-
-
-
-
-$.fn.parallaxHorizontal = function ( resistance, mouse ) 
-{
-	$el = $( this );
-	TweenLite.to( $el, .8, 
-	{
-		x : -(( mouse.clientX - (window.innerWidth/2) ) / resistance )
-	});
-
-};
-
-
-$.fn.parallaxVertical = function ( resistance, mouse ) 
-{
-	$el = $( this );
-	TweenLite.to( $el, .8, 
-	{
-		y : -(( mouse.clientY - (window.innerWidth/2) ) / resistance )
-	});
-
-};
-
-$.fn.parallaxCompleto = function ( resistance, mouse ) 
-{
-	$el = $( this );
-	TweenLite.to( $el, .8, 
-	{
-		x : -(( mouse.clientX - (window.innerWidth/2) ) / resistance ),
-		y : -(( mouse.clientY - (window.innerHeight/2) ) / resistance )
-	});
-
-};
-
-ww = $(window).width();
-
-

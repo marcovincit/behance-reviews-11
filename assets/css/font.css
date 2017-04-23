@@ -1,4 +1,16 @@
 @font-face {
+  font-family: 'Behance 225';
+  src: url('../fonts/Behance-275.eot');
+  src: url('../fonts/Behance-275.woff2') format('woff2'),
+       url('../fonts/Behance-275.woff') format('woff'),
+       url('../fonts/Behance-275.ttf') format('truetype'),
+       url('../fonts/Behance-275.svg#Behance-Regular') format('svg'),
+       url('../fonts/Behance-275.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Behance 400';
   src: url('../fonts/Behance-400.eot');
   src: url('../fonts/Behance-400.woff2') format('woff2'),
