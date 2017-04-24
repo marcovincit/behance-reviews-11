@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
 	function close() {
-		var closeOffset = $('circle.ball').offset();
-		var closeSize = $('circle.ball').size();
+		var closeOffset = $('.active circle.ball').offset();
+		var closeSize = $('.active circle.ball').size();
 		console.log(closeSize)
-		$('.close').offset(closeOffset);
+		$('.active .close').offset(closeOffset);
 	}
 
 
@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 	$('#main-menu li').hover(function() {
 
-		$('#main-menu li').addClass('off');
+		$('#main-menu li, #links').addClass('off');
 		$(this).removeClass('off');
 
 
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
 	}, function() {
 
-		$('#main-menu li').removeClass('off');
+		$('#main-menu li, #links').removeClass('off');
 
 
 		setTimeout(function(){
@@ -65,6 +65,12 @@ $(document).ready(function() {
 		$("#"+idMenu+"_shape").removeClass('off').addClass('change');
 
 
+
+		if (idMenu === 'hosts') {
+			$('.mask').addClass('active');
+		}
+
+
 		setTimeout(function(){
 
 			$("#"+idMenu+"_shape").removeClass('change').addClass('active');
@@ -85,7 +91,7 @@ $(document).ready(function() {
 
 		close();
 
-		setTimeout(function(){ close(); }, 1000);
+		setTimeout(function(){ close(); }, 2000);
 
 	});
 
@@ -93,26 +99,82 @@ $(document).ready(function() {
 
 	$(".close").click(function () {
 
-		$(".father.active").addClass('change-return').removeClass('active');
+		
 		$(".section.active").removeClass('active');
+		$('.mask').removeClass('active');
 
-		$("#header").removeClass('active');
+		
+
+		setTimeout(function(){
+
+			$("#header").removeClass('active');
+
+			$(".father.active").addClass('change-return').removeClass('active');
+
+		}, 500);
 
 		
 
 
 		setTimeout(function(){
 
-			$(".change-return").removeClass('change-return');
-
 			$('#main-menu, #header').removeClass('out');
 			$('.father').removeClass('off');
 
 		}, 1000);
 
+		setTimeout(function(){
+
+			$(".change-return").removeClass('change-return');
+
+		}, 2000);
+
 		
 
 		close();
+	});
+
+
+
+
+	$('#judges-name-list li').hover(function () {
+		$('#judges-name-list li').addClass('off');
+		$(this).removeClass('off');
+
+		var thisNumber = $(this).index() + 1;
+
+		$('#judges-image-list li:nth-child('+ thisNumber +')').find('img').addClass('active');
+
+
+	}, function () {
+		$('#judges-name-list li').removeClass('off');
+		$('#judges-image-list img').removeClass('active');
+	});
+
+
+	$('#hosts-name-list li').hover(function () {
+		$('#hosts-name-list li').addClass('off');
+		$(this).removeClass('off');
+
+		var thisNumber = $(this).index() + 1;
+
+		$('#hosts-image-list li:nth-child('+ thisNumber +')').find('img').addClass('active');
+
+
+	}, function () {
+		$('#hosts-name-list li').removeClass('off');
+		$('#hosts-image-list img').removeClass('active');
+	});
+
+
+
+
+
+
+	$(window).resize(function () {
+		setTimeout(function(){ 
+			close();
+		}, 1000);	
 	});
 
 
