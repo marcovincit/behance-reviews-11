@@ -103,7 +103,7 @@ body {
 
 	padding: 50px;
 
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 a {
@@ -173,6 +173,15 @@ p {
 	.opacity(0);
 }
 
+
+
+
+@media (min-width: 750px) {
+
+
+body {
+	overflow: hidden;
+}
 
 
 #header {
@@ -300,7 +309,7 @@ p {
 	position: fixed;
 	z-index: 100;
 	top: 60px;
-	left: 20%;
+	left: 20vw;
 
 	.transition-duration(2s);
 	.ttf;
@@ -469,8 +478,8 @@ p {
 }
 
 .close {
-	width: 60px;
-	height: 60px;
+	width: 4vw;
+	height: 4vw;
 	position: fixed;
 	z-index: 9999;
 	cursor: pointer;
@@ -898,7 +907,7 @@ p {
 
 		svg {
 			.transition-02;
-			.transform(rotate(180deg));
+			.transform(rotate(0deg));
 		}		
 
 		.ball {
@@ -975,7 +984,7 @@ p {
 		
 		svg {
 			.transition-02;
-			.transform(rotate(-180deg));
+			.transform(rotate(0deg));
 		}		
 
 		.ball {
@@ -1051,7 +1060,7 @@ p {
 		
 		svg {
 			.transition-01;
-			.transform(rotate(360deg));
+			.transform(rotate(0deg));
 		}
 		
 		.ball {
@@ -1126,7 +1135,7 @@ p {
 	}
 
 	#about-content {
-		.transform(translate(100%, 0%));
+		.transform(translate(100vw, 0%));
 		.transtion-bezie;
 		.transition-delay(800ms);
 		.transition-duration(400ms);
@@ -1483,10 +1492,10 @@ polyline {
 			.transition-timing-function(ease);
 			.transition-delay(0);
 
-			&:nth-child(1) { top: 100vw; left: 15%; .transition-duration(1100ms);}
-			&:nth-child(2) { top: 100vw; left: 25%; .transition-duration(900ms);}
-			&:nth-child(3) { top: 100vw; left: 55%; .transition-duration(600ms);}
-			&:nth-child(4) { bottom: -100vw; right: 12%; .transition-duration(300ms);}
+			&:nth-child(1) { top: 115vh; left: 15%; .transition-duration(1100ms);}
+			&:nth-child(2) { top: 115vh; left: 25%; .transition-duration(900ms);}
+			&:nth-child(3) { top: 115vh; left: 55%; .transition-duration(600ms);}
+			&:nth-child(4) { bottom: -115vh; right: 12%; .transition-duration(300ms);}
 
 		}
 	}
@@ -1587,6 +1596,7 @@ polyline {
 		p {
 			padding-top: 20px;
 		}
+
 	}
 
 	#location-guaja {
@@ -1613,4 +1623,313 @@ polyline {
 	}
 }
 
+
+}
+
+
+#mobile-links, #schedule-date-mobile, footer, #event-sponsorships-mobile {
+	display: none;
+}
+
+
+
+@media (max-width: 749px) {
+	
+	body {
+		padding: 0!important;
+
+		background: @white;
+		color: @black;
+
+		overflow-x: hidden;
+	}
+
+	img {
+		display: none;
+	}
+
+	.section {
+		padding: 50px;
+	}
+
+	h2 {
+		font-size: 5vh;
+		line-height: 5vh;
+    	letter-spacing: -.3vh;
+	}
+
+
+
+	#header {
+		background: @black;
+		color: @white;
+
+		width: 100%;
+		height: 100vh/1.618vh;
+
+		// position: absolute;
+		// top: 0;
+		// left: 0;
+		
+		font-size: 16px;
+		font-family: 'Behance 225', sans-serif;
+		font-weight: 400;
+
+		h1 {
+			font-size: 16px;
+			font-family: 'Behance 225', sans-serif;
+			font-weight: 400;
+			padding: 50px;
+		}
+	}
+
+	#event-location, #event-date, #main-menu, #about-col-02 {
+		display: none;
+	}
+
+
+	#schedule_shape {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		.translate(-50%,-50%);
+		width: 90vw;
+		display: block;
+
+		.ball {
+			fill:transparent;
+			stroke-width:0;
+			r:22;
+			display: none!important;
+			.opacity(0);
+		}
+
+	}
+
+	.father {
+		display: none;
+	}
+
+	#schedule-date-mobile {
+		// position: absolute;
+		// bottom: 0vh;
+		// left: 50%;
+
+		// .translate(-50%,-50%);
+
+		display: block;
+		margin: 0 auto;
+	
+		width: 100%;
+		
+		height: (100vh/1.618)/1.618;
+
+		position: relative;
+
+		svg {
+			width: 75vw;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			.translate(-50%,-50%);
+		}
+	}
+
+
+	#about {
+		padding-top: 2vh;
+
+		h2 {
+			display: none;
+		}
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 26px;
+		padding-bottom: 26px;
+	}
+
+
+	#schedule {
+		line-height: 30px;
+
+		&:before {
+			content: "Schedule";
+			font-size: 20vw;
+			letter-spacing: -1.5vw;
+
+		}
+	}
+
+	#schedule-date {
+		display: none;
+	}
+
+	#schedule-list {
+		margin-top: 30px;
+	}
+
+
+	#judges {
+		line-height: 30px;
+
+		&:before {
+			content: "Judges";
+			font-size: 20vw;
+			letter-spacing: -1.5vw;
+
+		}
+	}
+
+	#hosts {
+		line-height: 30px;
+
+		&:before {
+			content: "Hosts";
+			font-size: 20vw;
+			letter-spacing: -1.5vw;
+
+		}
+	}
+
+	#judges-name-list, #hosts-name-list {
+		li {
+			margin-top: 30px;
+			span {
+				margin-top: -10px;
+				display: block;
+				font-size: 12px;
+				line-height: 30px;
+				padding-left: 3px;  
+			}
+		}
+
+
+	}
+
+
+	#location {
+
+		background: @black;
+		position: relative;
+		padding-top: 100px;
+
+		h2 {
+			content: "Location";
+			font-size: 20vw;
+			line-height: 20vw;
+			letter-spacing: -1.5vw;
+			color: @white;
+
+			span {
+				display: none;
+			}
+		}
+
+		&:after { 
+			content: "";
+			width: 60px;
+			height: 60px;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			border-radius: 100%;
+			background: @blue-light-01;
+			.translate(-50% -50%);		
+		}
+	}
+
+	#location-text {
+		color: @white;
+		p {
+			line-height: 16px;
+			margin-top: 20px;
+		}
+	}
+
+
+	#event-sponsorships {
+		display: none;
+	}
+
+
+	#event-sponsorships-mobile {
+		display: block;
+		img {
+			height: 4vh;
+		}
+	}
+
+
+	#mobile-links {
+		display: block;
+		margin-bottom: 80px;
+		a {
+			text-transform: uppercase;
+			display: block;
+			font-size: 14px;
+			line-height: 30px;
+		}
+
+		&:after, &:before {
+			content: "";
+			width: 100%;
+			height: 1px;
+			background: darken(@white, 80%);
+			display: block;
+			
+		}
+
+		&:before {
+			margin:0 0 80px 0;
+		}
+
+		&:after {
+			margin:80px 0 80px 0;
+		}
+	}
+
+
+
+	footer {
+		background: @black;
+		padding:0 50px 50px;
+		color: @white;
+		font-size: 12px;
+		display: block;
+		img {
+			display: block;
+		}
+
+		#guaja, #abedesign {
+			margin-top: 50px;
+
+			span {
+				display: block;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.off {
+		.opacity(1);
+	}
+
+
+	#float-mobile {
+		position: absolute;	
+		z-index: 200;
+		width: 60px;
+		height: 60px;
+		border-radius: 50px;
+		-webkit-radius: 50px;
+		background-color: @green-01;
+	}
+
+
+
+
+
+}
 
