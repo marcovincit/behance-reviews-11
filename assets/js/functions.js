@@ -1,3 +1,12 @@
+$(".father").addClass('off');
+
+
+$(window).load(function () {
+	$("#header").removeClass('out');
+	$(".father").removeClass('off');
+});
+
+
 $(document).ready(function() {
 
 	function close() {
@@ -185,69 +194,149 @@ $(document).ready(function() {
 
 
 
-if ( $(window).width() < 750) {
 
 
-	var x = 0, y = 0,
-	    vx = 0, vy = 0,
-		ax = 0, ay = 0;
+// var x = 0, y = 0,
+//     vx = 0, vy = 0,
+// 	ax = 0, ay = 0;
+	
+// var sphere = document.getElementById("float-mobile");
+
+// if (window.DeviceMotionEvent != undefined) {
+// 	window.ondevicemotion = function(e) {
+// 		ax = event.accelerationIncludingGravity.x * 5;
+// 		ay = event.accelerationIncludingGravity.y * 5;
+// 		document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
+// 		document.getElementById("accelerationY").innerHTML = e.accelerationIncludingGravity.y;
+// 		document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
+
+// 		if ( e.rotationRate ) {
+// 			document.getElementById("rotationAlpha").innerHTML = e.rotationRate.alpha;
+// 			document.getElementById("rotationBeta").innerHTML = e.rotationRate.beta;
+// 			document.getElementById("rotationGamma").innerHTML = e.rotationRate.gamma;
+// 		}		
+// 	}
+
+// 	setInterval( function() {
+// 		var landscapeOrientation = window.innerWidth/window.innerHeight > 1;
+// 		if ( landscapeOrientation) {
+// 			vx = vx + ay;
+// 			vy = vy + ax;
+// 		} else {
+// 			vy = vy - ay;
+// 			vx = vx + ax;
+// 		}
+// 		vx = vx * 0.98;
+// 		vy = vy * 0.98;
+// 		y = parseInt(y + vy / 50);
+// 		x = parseInt(x + vx / 50);
 		
-	var sphere = document.getElementById("float-mobile");
-
-
-
-	if (window.DeviceMotionEvent != undefined) {
-		window.ondevicemotion = function(e) {
-			ax = event.accelerationIncludingGravity.x * 5;
-			ay = event.accelerationIncludingGravity.y * 5;
-			document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
-			document.getElementById("accelerationY").innerHTML = e.accelerationIncludingGravity.y;
-			document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
-
-			if ( e.rotationRate ) {
-				document.getElementById("rotationAlpha").innerHTML = e.rotationRate.alpha;
-				document.getElementById("rotationBeta").innerHTML = e.rotationRate.beta;
-				document.getElementById("rotationGamma").innerHTML = e.rotationRate.gamma;
-
-				// $('#schedule_shape').css({ left: e.rotationRate.alpha });
-			}		
-		}
-
-		setInterval( function() {
-			var landscapeOrientation = window.innerWidth/window.innerHeight > 1;
-			if ( landscapeOrientation) {
-				vx = vx + ay;
-				vy = vy + ax;
-			} else {
-				vy = vy - ay;
-				vx = vx + ax;
-			}
-			vx = vx * 0.98;
-			vy = vy * 0.98;
-			y = parseInt(y + vy / 50);
-			x = parseInt(x + vx / 50);
-			
-			boundingBoxCheck();
-			
-			// sphere.style.top = -y + "px";
-			// sphere.style.transform = "translateY("+y+")"
-			// // sphere.style.left = -x + "px";
-			// sphere.style.transform = "translateX("+x+")"
-
-			$("#float-mobile").css({"transform":"translate(" +  x + "px, " + y+ "px)"});
-
-			$("#float-mobile").appendTo(e.accelerationIncludingGravity.z);
-			
-		}, 25);
-	} 
-
-
-	function boundingBoxCheck(){
-		if (x<0) { x = 0; vx = -vx; }
-		if (y<0) { y = 0; vy = -vy; }
-		if (x>document.documentElement.clientWidth-20) { x = document.documentElement.clientWidth-20; vx = -vx; }
-		if (y>document.documentElement.clientHeight-20) { y = document.documentElement.clientHeight-20; vy = -vy; }
+// 		boundingBoxCheck();
 		
+// 		// sphere.style.top = y + "px";
+// 		// sphere.style.left = x + "px";
+
+// 		transformX = x+"px";
+// 		transformY = y+"px";
+
+// 		sphere.css('transform', 'translateX(' +transformX+ ') translateY(' +transformY+ ')');​
+		
+// 	}, 25);
+// } 
+
+
+// var cores = Array('#48CCDF','#0098CE', '#39499B', '#122463', '#FF7175', '#EB3C7D', '#8AE872', '#1CDB5C', '#7C5FC4', '#C652B4', '#FFE900', '#FFD33A');
+
+// function cor() {
+// 	var cor = cores[Math.floor(Math.random()*cores.length)];
+// 	sphere.style.background = cor;
+// }
+
+
+// function boundingBoxCheck(){
+// 	if (x<0) { x = 0; vx = -vx; cor()}
+// 	if (y<0) { y = 0; vy = -vy; cor()}
+// 	if (x>document.documentElement.clientWidth-60) { x = document.documentElement.clientWidth-60; vx = -vx; cor()}
+// 	if (y>document.documentElement.clientHeight-60) { y = document.documentElement.clientHeight-60; vy = -vy; cor()}
+	
+// }
+
+
+
+var x = 0, y = 0,
+    vx = 0, vy = 0,
+	ax = 0, ay = 0;
+	
+var sphere = document.getElementById("float-mobile");
+// var shape = document.getElementById("schedule_shape_circle");
+
+if (window.DeviceMotionEvent != undefined) {
+	window.ondevicemotion = function(e) {
+		ax = event.accelerationIncludingGravity.x * 4;
+		ay = event.accelerationIncludingGravity.y * 4;
+		document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
+		document.getElementById("accelerationY").innerHTML = e.accelerationIncludingGravity.y;
+		document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
+
+		if ( e.rotationRate ) {
+			document.getElementById("rotationAlpha").innerHTML = e.rotationRate.alpha;
+			document.getElementById("rotationBeta").innerHTML = e.rotationRate.beta;
+			document.getElementById("rotationGamma").innerHTML = e.rotationRate.gamma;
+		}		
 	}
 
+	setInterval( function() {
+		var landscapeOrientation = window.innerWidth/window.innerHeight > 1;
+		if ( landscapeOrientation) {
+			vx = vx + ay;
+			vy = vy + ax;
+		} else {
+			vy = vy - ay;
+			vx = vx + ax;
+		}
+		vx = vx * 0.98;
+		vy = vy * 0.98;
+		y = parseInt(y + vy / 50);
+		x = parseInt(x + vx / 50);
+		
+		boundingBoxCheck();
+		
+		// sphere.style.top = y + "px";
+		// sphere.style.left = x + "px";
+
+		transformX = x+"px";
+		transformY = y+"px";
+
+		// sphere.css('transform', 'translateX(' +transformX+ ') translateY(' +transformY+ ')');​
+
+		sphere.style.transform = "translate("+transformX+","+transformY+")";
+
+		// shape.style.transform = "rotateY("+x+"deg) translate(-50%,-50%)";
+
+
+
+		
+	}, 25);
+} 
+
+
+var cores = Array('#48CCDF','#0098CE', '#39499B', '#122463', '#FF7175', '#EB3C7D', '#8AE872', '#1CDB5C', '#7C5FC4', '#C652B4', '#FFE900', '#FFD33A');
+
+function cor() {
+	var cor = cores[Math.floor(Math.random()*cores.length)];
+	sphere.style.background = cor;
 }
+
+
+
+
+function boundingBoxCheck(){
+	if (x<0) { x = 0; vx = -vx; cor()}
+	if (y<0) { y = 0; vy = -vy;}
+	if (x>document.documentElement.clientWidth-60) { x = document.documentElement.clientWidth-60; vx = -vx; cor()}
+	if (y>document.documentElement.clientHeight-60) { y = document.documentElement.clientHeight-60; vy = -vy; cor()}
+	
+}
+
+
+

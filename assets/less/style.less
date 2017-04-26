@@ -1918,13 +1918,19 @@ polyline {
 
 
 	#float-mobile {
-		position: absolute;	
-		z-index: 200;
+		position: fixed!important;	
+		z-index: 9999;
 		width: 60px;
 		height: 60px;
+
+		top: 0;
+		left: 0;
 		border-radius: 50px;
 		-webkit-radius: 50px;
 		background-color: @green-01;
+
+		-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+   		 backface-visibility: hidden;
 	}
 
 

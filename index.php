@@ -21,7 +21,7 @@
 
 	<title>11th Bēhance Portfolio Reviews - Belo Horizonte</title>
 	<link rel="icon" href="favicon.png" type="image/x-icon" />
-	<link rel="stylesheet" href="assets/dist/all.min.css">
+	<link rel="stylesheet" href="assets/dist/all.min.css?=<?php echo(rand()) ?>">
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
@@ -123,7 +123,7 @@
 
 
 
-	<div id="about_shape" class="father">
+	<div id="about_shape" class="father off">
 
 		<div class="center-shape">
 
@@ -141,11 +141,11 @@
 
 
 
-	<div id="schedule_shape" class="father">
+	<div id="schedule_shape" class="father off">
 
 		<div class="center-shape">
 			<svg class="stroke shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.88 220">
-			    <circle class="circle" cx="110" cy="110" r="80"  />
+			    <circle id="schedule_shape_circle" class="circle" cx="110" cy="110" r="80"  />
 			    <rect  class="square" x="30" y="30" width="160" height="160" />
 			    <rect class="rectangle" x="30" y="30" width="258.88" height="160" />
 
@@ -158,7 +158,7 @@
 
 
 
-	<div id="judges_shape" class="father">
+	<div id="judges_shape" class="father off">
 
 		<div class="center-shape">
 
@@ -178,7 +178,7 @@
 
 
 
-	<div id="hosts_shape" class="father">
+	<div id="hosts_shape" class="father off">
 
 		<div class="center-shape">
 			<svg class="stroke shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.88 220">
@@ -201,7 +201,7 @@
 
 
 
-	<div id="location_shape" class="father">
+	<div id="location_shape" class="father off">
 
 		<div class="center-shape">
 			<svg class="stroke shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.88 220">
@@ -223,7 +223,7 @@
 		<div class="close"></div>
 	</div>
 
-	<div id="fake_shape_02" class="father">
+	<div id="fake_shape_02" class="father off">
 
 		<div class="center-shape">
 			<svg class="stroke shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.88 220">
@@ -412,10 +412,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-<script src="assets/dist/concat.min.js"></script>
-
-
-<!-- ?=<?php echo(rand()) ?> -->
+<script src="assets/dist/concat.min.js?=<?php echo(rand()) ?>"></script>
 
 
 </body>
