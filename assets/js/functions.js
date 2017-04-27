@@ -263,6 +263,40 @@ $(document).ready(function() {
 
 
 
+
+function modulate(value, rangeA, rangeB, limit) {
+    var fromHigh, fromLow, result, toHigh, toLow;
+    if (limit == null) {
+        limit = false;
+    }
+    fromLow = rangeA[0];
+    fromHigh = rangeA[1];
+    toLow = rangeB[0];
+    toHigh = rangeB[1];
+    result = toLow + (((value - fromLow) / (fromHigh - fromLow)) * (toHigh - toLow));
+    if(limit === true) {
+        if(toLow < toHigh) {
+            if(result < toLow) {
+                return toLow;
+            }
+            if(result > toHigh) {
+                return toHigh;
+            }
+        }else{
+            if(result > toLow) {
+                return toLow;
+            }
+            if(result < toHigh) {
+                return toHigh;
+            }
+        }
+    }
+    return result;
+}
+
+
+
+
 var x = 0, y = 0,
     vx = 0, vy = 0,
 	ax = 0, ay = 0;
@@ -309,9 +343,21 @@ if (window.DeviceMotionEvent != undefined) {
 
 		// sphere.css('transform', 'translateX(' +transformX+ ') translateY(' +transformY+ ')');​
 
-		sphere.style.transform = "translate("+transformX+","+transformY+")";
 
-		// shape.style.transform = "rotateY("+x+"deg) translate(-50%,-50%)";
+		if (window.innerWidth < 750) {
+
+			sphere.style.transform = "translate("+transformX+","+transformY+")";
+
+			var circle = document.getElementById("schedule_shape_circle");
+			var square = document.getElementById("schedule_shape_square");
+			var svgFather = document.getElementById("schedule_shape_svg");
+			
+
+			circle.style.transform = "translateX("+modulate(y,[0,window.innerWidth],[98,0],true)+"px)";
+			square.style.transform = "translateX("+modulate(x,[0,window.innerWidth],[98,-20],true)+"px)";
+			// svgFather.style.transform = "rotate("+modulate(y,[window.innerWidth/2,window.innerWidth],[0,10],true)+"deg)";
+
+		}
 
 
 

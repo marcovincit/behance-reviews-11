@@ -144,9 +144,9 @@
 	<div id="schedule_shape" class="father off">
 
 		<div class="center-shape">
-			<svg class="stroke shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.88 220">
+			<svg id="schedule_shape_svg" class="stroke shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.88 220">
 			    <circle id="schedule_shape_circle" class="circle" cx="110" cy="110" r="80"  />
-			    <rect  class="square" x="30" y="30" width="160" height="160" />
+			    <rect  id="schedule_shape_square" class="square" x="30" y="30" width="160" height="160" />
 			    <rect class="rectangle" x="30" y="30" width="258.88" height="160" />
 
 			    <circle class="ball" cx="288" cy="60" r="17"  />
@@ -250,8 +250,10 @@
 
 <section id="about" class="section">
 
+	<h2 id="about-title">Connect & Get <br> Feedback on Your <br> Creative Work</h2>
+
 	<div id="about-content">
-		<h2>About</h2>
+		
 
 
 		<div class="text">
@@ -261,12 +263,8 @@
 				<p>O Behance Reviews faz parte do calendário oficial do Behance, associado à Adobe. Uma das condições para tornar o evento oficial em BH é que ele seja totalmente gratuito para os participantes e totalmente colaborativo.</p>
 
 				<p>Todos os anos estamos a procura de parceiros, que acreditam em mudar o cenário cultural da cidade e identificar novos talentos para o mercado.</p>
-			</div>
-
-
-			<div id="about-col-02">
 				
-				<p><b>Alguns fatos bem legais sobre as últimas edições:</b></p>
+				<p><b>Coisas legais sobre as últimas edições:</b></p>
 
 				<p>Nossos ingressos acabaram em apenas 15 minutos, e isso sempre é uma dor de cabeça. 😅</p>
 
@@ -274,7 +272,7 @@
 
 				<p>Nas últimas edições começamos a convidar os ganhadores das edições anteriores para expor trabalhos e isso foi um sucesso pra eles. 😮</p>
 
-				<p>vamos mudar pra: Nossa fanpage já tem 1,056 likes, e a página do próximo evento já tem 47 confirmações e 182 interessados. ❤️</p>
+				<a target="_blank" title="Like us on facebook" href="https://www.facebook.com/behancereviewsbh/">Like us on facebook</a>
 
 			</div>
 		</div>
@@ -282,7 +280,9 @@
 		<div class="close"></div>
 	</div>
 
-	<div id="about-photo"></div>
+	<div id="about-photo">
+		<img class="img-responsive" src="assets/img/about.jpg" alt="">
+	</div>
 
 
 </section>
@@ -386,11 +386,11 @@
 	</div>
 
 	<div id="event-sponsorships-mobile">
-		<div id="guaja">
+		<div id="guaja-mobile">
 			<span>Parceiro:</span>
 			<img src="assets/img/logo/guaja.svg" alt="">
 		</div>
-		<div id="abedesign">
+		<div id="abedesign-mobile">
 			<span>Apoio Institucional:</span>
 			<img src="assets/img/logo/abedesign.svg" alt="">
 		</div>

@@ -21,7 +21,7 @@
 
 	<title>11th Bēhance Portfolio Reviews - Belo Horizonte</title>
 	<link rel="icon" href="favicon.png" type="image/x-icon" />
-	<link rel="stylesheet" href="assets/dist/all.min.css?=<?php echo(rand()) ?>">
+	<link rel="stylesheet" href="assets/dist/all.min.css">
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
@@ -123,7 +123,7 @@
 
 
 
-	<div id="about_shape" class="father off">
+	<div id="about_shape" class="father">
 
 		<div class="center-shape">
 
@@ -141,12 +141,12 @@
 
 
 
-	<div id="schedule_shape" class="father off">
+	<div id="schedule_shape" class="father">
 
 		<div class="center-shape">
-			<svg id="schedule_shape_svg" class="stroke shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.88 220">
-			    <circle id="schedule_shape_circle" class="circle" cx="110" cy="110" r="80"  />
-			    <rect  id="schedule_shape_square" class="square" x="30" y="30" width="160" height="160" />
+			<svg class="stroke shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.88 220">
+			    <circle class="circle" cx="110" cy="110" r="80"  />
+			    <rect  class="square" x="30" y="30" width="160" height="160" />
 			    <rect class="rectangle" x="30" y="30" width="258.88" height="160" />
 
 			    <circle class="ball" cx="288" cy="60" r="17"  />
@@ -158,7 +158,7 @@
 
 
 
-	<div id="judges_shape" class="father off">
+	<div id="judges_shape" class="father">
 
 		<div class="center-shape">
 
@@ -178,7 +178,7 @@
 
 
 
-	<div id="hosts_shape" class="father off">
+	<div id="hosts_shape" class="father">
 
 		<div class="center-shape">
 			<svg class="stroke shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.88 220">
@@ -201,7 +201,7 @@
 
 
 
-	<div id="location_shape" class="father off">
+	<div id="location_shape" class="father">
 
 		<div class="center-shape">
 			<svg class="stroke shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.88 220">
@@ -223,7 +223,7 @@
 		<div class="close"></div>
 	</div>
 
-	<div id="fake_shape_02" class="father off">
+	<div id="fake_shape_02" class="father">
 
 		<div class="center-shape">
 			<svg class="stroke shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.88 220">
@@ -250,10 +250,8 @@
 
 <section id="about" class="section">
 
-	<h2 id="about-title">Connect & Get <br> Feedback on Your <br> Creative Work</h2>
-
 	<div id="about-content">
-		
+		<h2>About</h2>
 
 
 		<div class="text">
@@ -263,8 +261,12 @@
 				<p>O Behance Reviews faz parte do calendário oficial do Behance, associado à Adobe. Uma das condições para tornar o evento oficial em BH é que ele seja totalmente gratuito para os participantes e totalmente colaborativo.</p>
 
 				<p>Todos os anos estamos a procura de parceiros, que acreditam em mudar o cenário cultural da cidade e identificar novos talentos para o mercado.</p>
+			</div>
+
+
+			<div id="about-col-02">
 				
-				<p><b>Coisas legais sobre as últimas edições:</b></p>
+				<p><b>Alguns fatos bem legais sobre as últimas edições:</b></p>
 
 				<p>Nossos ingressos acabaram em apenas 15 minutos, e isso sempre é uma dor de cabeça. 😅</p>
 
@@ -272,7 +274,7 @@
 
 				<p>Nas últimas edições começamos a convidar os ganhadores das edições anteriores para expor trabalhos e isso foi um sucesso pra eles. 😮</p>
 
-				<a target="_blank" title="Like us on facebook" href="https://www.facebook.com/behancereviewsbh/">Like us on facebook</a>
+				<p>vamos mudar pra: Nossa fanpage já tem 1,056 likes, e a página do próximo evento já tem 47 confirmações e 182 interessados. ❤️</p>
 
 			</div>
 		</div>
@@ -280,9 +282,7 @@
 		<div class="close"></div>
 	</div>
 
-	<div id="about-photo">
-		<img class="img-responsive" src="assets/img/about.jpg" alt="">
-	</div>
+	<div id="about-photo"></div>
 
 
 </section>
@@ -412,7 +412,10 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-<script src="assets/dist/concat.min.js?=<?php echo(rand()) ?>"></script>
+<script src="assets/dist/concat.min.js"></script>
+
+
+<!-- ?=<?php echo(rand()) ?> -->
 
 
 </body>
