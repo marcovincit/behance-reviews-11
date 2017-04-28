@@ -74,13 +74,17 @@
 
 
 		<div id="event-sponsorships">
+			<div id="studiosol">
+				<span>Patrocínio:</span>
+				<a target="_blank" href="https://www.studiosol.com.br/" title="Studio Sol"><img src="assets/img/logo/studiosol.svg" alt="Studio Sol"></a>
+			</div>
 			<div id="guaja">
 				<span>Parceiro:</span>
-				<img src="assets/img/logo/guaja.svg" alt="">
+				<a target="_blank" href="http://guaja.cc" title="Guaja"><img src="assets/img/logo/guaja.svg" alt="Guaja"></a>
 			</div>
 			<div id="abedesign">
 				<span>Apoio Institucional:</span>
-				<img src="assets/img/logo/abedesign.svg" alt="">
+				<a target="_blank" href="http://www.abedesign.org.br/" title="ABEDESIGN - Associação Brasileira das Empresas de Design"><img src="assets/img/logo/abedesign.svg" alt="ABEDESIGN - Associação Brasileira das Empresas de Design"></a>
 			</div>
 		</div>
 
@@ -96,7 +100,7 @@
 			</ul>
 
 			<div id="links">
-				<a href="https://www.facebook.com/behancereviewsbh/" target="_blank">Inscrições</a>
+				<!-- a href="https://www.facebook.com/behancereviewsbh/" target="_blank">Inscrições</a> -->
 				<a href="https://www.facebook.com/events/630794477113598/?active_tab=discussion" target="_blank">Contact</a>
 				<a href="https://www.instagram.com/explore/tags/behancereviewsbh/" target="_blank">Instagram</a>
 				<a href="https://www.facebook.com/behancereviewsbh/" target="_blank">Facebook</a>
@@ -377,7 +381,7 @@
 
 <footer>
 	<div id="mobile-links">
-		<a href="https://www.facebook.com/behancereviewsbh/" target="_blank">Inscrições</a>
+		<!-- <a href="https://www.facebook.com/behancereviewsbh/" target="_blank">Inscrições</a> -->
 		<a href="https://www.facebook.com/events/630794477113598/?active_tab=discussion" target="_blank">Contact</a>
 		<a href="https://www.instagram.com/explore/tags/behancereviewsbh/" target="_blank">Instagram</a>
 		<a href="https://www.facebook.com/behancereviewsbh/" target="_blank">Facebook</a>
@@ -386,13 +390,17 @@
 	</div>
 
 	<div id="event-sponsorships-mobile">
+		<div id="studiosol-mobile">
+			<span>Patrocínio:</span>
+			<a target="_blank" href="https://www.studiosol.com.br/" title="Studio Sol"><img src="assets/img/logo/studiosol.svg" alt="Studio Sol"></a>
+		</div>
 		<div id="guaja-mobile">
 			<span>Parceiro:</span>
-			<img src="assets/img/logo/guaja.svg" alt="">
+			<a target="_blank" href="http://guaja.cc" title="Guaja"><img src="assets/img/logo/guaja.svg" alt="Guaja"></a>
 		</div>
 		<div id="abedesign-mobile">
 			<span>Apoio Institucional:</span>
-			<img src="assets/img/logo/abedesign.svg" alt="">
+			<a target="_blank" href="http://www.abedesign.org.br/" title="ABEDESIGN - Associação Brasileira das Empresas de Design"><img src="assets/img/logo/abedesign.svg" alt="ABEDESIGN - Associação Brasileira das Empresas de Design"></a>
 		</div>
 	</div>
 

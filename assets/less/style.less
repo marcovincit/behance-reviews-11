@@ -387,17 +387,31 @@ body {
 	bottom: 60px;
 	left: 0;
 
-	> div {
+
+	#studiosol {
+		img {
+			height: 50px;
+		}
+
+		span {
+			margin-bottom: 0;
+		}
+		margin-bottom: 40px;
+	}
+
+	#guaja, #abedesign {
 		float: left;
 
-		&:first-child {
-			margin-right: 50px;
-		}
 		
 	}
+
+	#guaja {
+		margin-right: 50px;
+	}
+
 	img {
 		width: auto;
-		height: 20px;
+		height: 15px;
 	}
 	span {
 		display: block;
@@ -1897,8 +1911,28 @@ polyline {
 	#event-sponsorships-mobile {
 		display: block;
 		img {
-			height: 4vh;
+			height: 2.5vh;
 		}
+
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+	}
+
+	#guaja-mobile, #abedesign-mobile {
+		float: left;
+	}
+
+	#studiosol-mobile {
+		img {
+			height: 8vh;
+		}
+	}
+
+	#abedesign-mobile {
+		margin-left: 30px;
 	}
 
 

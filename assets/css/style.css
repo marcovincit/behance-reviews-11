@@ -3815,15 +3815,25 @@ p {
     bottom: 60px;
     left: 0;
   }
-  #event-sponsorships > div {
+  #event-sponsorships #studiosol {
+    margin-bottom: 40px;
+  }
+  #event-sponsorships #studiosol img {
+    height: 50px;
+  }
+  #event-sponsorships #studiosol span {
+    margin-bottom: 0;
+  }
+  #event-sponsorships #guaja,
+  #event-sponsorships #abedesign {
     float: left;
   }
-  #event-sponsorships > div:first-child {
+  #event-sponsorships #guaja {
     margin-right: 50px;
   }
   #event-sponsorships img {
     width: auto;
-    height: 20px;
+    height: 15px;
   }
   #event-sponsorships span {
     display: block;
@@ -5972,7 +5982,22 @@ footer,
     display: block;
   }
   #event-sponsorships-mobile img {
-    height: 4vh;
+    height: 2.5vh;
+  }
+  #event-sponsorships-mobile:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #guaja-mobile,
+  #abedesign-mobile {
+    float: left;
+  }
+  #studiosol-mobile img {
+    height: 8vh;
+  }
+  #abedesign-mobile {
+    margin-left: 30px;
   }
   #mobile-links {
     display: block;
